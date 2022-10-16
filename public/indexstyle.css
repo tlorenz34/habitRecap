@@ -1,0 +1,52 @@
+
+.filter-switch label {
+  cursor: pointer;
+}
+.filter-switch-item input:checked + label {
+  color: inherit;
+}
+.filter-switch-item input:not(:checked) + label {
+  --bg-opacity: 0;
+  box-shadow: none;
+}
+/* CSS */
+.button-74 {
+  background-color: #FF7E1D;
+  border: 2px solid #2D3142;
+  border-radius: 30px;
+  box-shadow: #2D3142 3px 3px 0 0;
+  color: #F1F7ED;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  outline: none;
+}
+
+.button-74:hover {
+  background-color: #FF8B33;
+  outline: none;
+
+}
+
+.button-74:active {
+  box-shadow: #2D3142 2px 2px 0 0;
+  border-color: transparent;
+  transform: translate(2px, 2px);
+  outline: none;
+
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}

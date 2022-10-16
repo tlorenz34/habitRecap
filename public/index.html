@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Recap</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.6/tailwind.min.css'><link rel="stylesheet" href="./indexstyle.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- https://dribbble.com/shots/10128438-Tailwind-Exploration-Status-Filter -->
+
+<body class="flex flex-col items-center py-16 bg-gray-100">
+  <!--FIRST QUESTION-->
+  <h1>Am I hungover?</h1>
+  <ul id="filter1" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4">
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter1" id="filter1-0" class="sr-only" value="Yes" checked>
+      <label for="filter1-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Yes
+      </label>
+      <div aria-hidden="true" class="filter-active"></div>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter1" id="filter1-1" value="No" class="sr-only">
+      <label for="filter1-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        No
+      </label>
+    </li>
+    
+  </ul>
+  <!--SECOND QUESTION-->
+  <h1>How many hours of sleep did I get?</h1>
+
+  <ul id="filter2" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4 border border-gray-300">
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter2" id="filter2-0" class="sr-only" value="0-2" checked>
+      <label for="filter2-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        0-2
+      </label>
+      <div aria-hidden="true" class="filter-active"></div>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter2" id="filter2-1" class="sr-only" value="3-5">
+      <label for="filter2-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        3-5
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter2" id="filter2-2" class="sr-only" value="5-7">
+      <label for="filter2-2" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        5-7
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter2" id="filter2-3" class="sr-only" value="8+">
+      <label for="filter2-3" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        8+
+      </label>
+    </li>
+  </ul>
+  <!--THIRD QUESTION-->
+  <h1>How happy am I?</h1>
+
+  <ul id="filter3" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4 border border-gray-400">
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter3" id="filter3-0" class="sr-only" value="Miserable" checked>
+      <label for="filter3-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Miserable
+      </label>
+      <div aria-hidden="true" class="filter-active"></div>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter3" id="filter3-1" class="sr-only" value="Sorta Happy">
+      <label for="filter3-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Sorta Happy
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter3" id="filter3-2" class="sr-only" value="Happy">
+      <label for="filter3-2" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Happy
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter3" id="filter3-3" class="sr-only" value="Really Happy">
+      <label for="filter3-3" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Really Happy
+      </label>
+    </li>
+  </ul>
+  <!--FOURTH QUESTION-->
+  <h1>How much energy do I have?</h1>
+
+  <ul id="filter4" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-300 rounded-md font-semibold text-blue-600 my-4">
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter4" id="filter4-0" class="sr-only" value="Running on Fumes" checked>
+      <label for="filter4-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Running on Fumes
+      </label>
+      <div aria-hidden="true" class="filter-active"></div>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter4" id="filter4-1" class="sr-only" value="Functioning">
+      <label for="filter4-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Functioning
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter4" id="filter4-2" class="sr-only" value="Energized Enough">
+      <label for="filter4-2" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Energized Enough
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter4" id="filter4-3" class="sr-only" value="I'm Cruising">
+      <label for="filter4-3" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        I'm Cruising
+      </label>
+    </li>
+  </ul>
+  <!-- FIFTH QUESTION -->
+  <h1>How social was I the other day?</h1>
+
+  <ul id="filter5" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4 border border-gray-400">
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter5" id="filter5-0" class="sr-only" value="Wasn't" checked>
+      <label for="filter5-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Wasn't 
+      </label>
+      <div aria-hidden="true" class="filter-active"></div>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter5" id="filter5-1" class="sr-only" value="Sort Of">
+      <label for="filter5-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Sort Of
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter5" id="filter5-2" class="sr-only" value="Social">
+      <label for="filter5-2" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Social
+      </label>
+    </li>
+    <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+      <input type="radio" name="filter5" id="filter5-3" class="sr-only" value="Very">
+      <label for="filter5-3" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+        Very
+      </label>
+    </li>
+  </ul>
+    <!-- SIXTH QUESTION -->
+    <h1>How productive was I the other day?</h1>
+
+    <ul id="filter6" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4 border border-gray-400">
+      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+        <input type="radio" name="filter6" id="filter6-0" class="sr-only" value="Got Nothing Done" checked>
+        <label for="filter6-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+          Got Nothing Done
+        </label>
+        <div aria-hidden="true" class="filter-active"></div>
+      </li>
+      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+        <input type="radio" name="filter6" id="filter6-1" class="sr-only" value="Completed some priorities">
+        <label for="filter6-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+          Completed Some Priorities
+        </label>
+      </li>
+      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+        <input type="radio" name="filter6" id="filter6-2" class="sr-only" value="Completed Priorities">
+        <label for="filter6-2" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+          Completed Priorities
+        </label>
+      </li>
+      <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+        <input type="radio" name="filter6" id="filter6-3" class="sr-only" value="Completed Priorities and More">
+        <label for="filter6-3" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+          Completed Priorities + More
+        </label>
+      </li>
+    </ul>
+        <!-- SEVENTH QUESTION -->
+        <h1>How many hours did I work the other day?</h1>
+
+        <ul id="filter7" class="filter-switch inline-flex items-center relative h-10 p-1 space-x-1 bg-gray-200 rounded-md font-semibold text-blue-600 my-4 border border-gray-400">
+          <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+            <input type="radio" name="filter7" id="filter7-0" class="sr-only" value="Got Nothing Done" checked>
+            <label for="filter7-0" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+              0-4
+            </label>
+            <div aria-hidden="true" class="filter-active"></div>
+          </li>
+          <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+            <input type="radio" name="filter7" id="filter7-1" class="sr-only" value="Completed some priorities">
+            <label for="filter7-1" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+              5-8
+            </label>
+          </li>
+          <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+            <input type="radio" name="filter7" id="filter7-2" class="sr-only" value="Completed Priorities">
+            <label for="filter7-2" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+              9-12
+            </label>
+          </li>
+          <li class="filter-switch-item flex relative h-8 bg-gray-300x">
+            <input type="radio" name="filter7" id="filter7-3" class="sr-only" value="Completed Priorities and More">
+            <label for="filter7-3" class="h-8 py-1 px-2 text-sm leading-6 text-gray-600 hover:text-gray-800 bg-white rounded shadow">
+              12+
+            </label>
+          </li>
+        </ul>
+
+    <button id="submitButton"class="button-74" role="button" style="outline: none;">Submit</button>
+
+
+  
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script  type="module" src="./firestore.js"></script>
+
+
+</body>
+</html>
