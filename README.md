@@ -1,5 +1,11 @@
 # Habit Recap
 
+## Demo
+
+First, login at `http://127.0.0.1:5002/user/login.html`
+Then, go to `http://127.0.0.1:5002/home.html`
+Click `Export Data`
+
 ## Export Data
 
 To export data, the static site calls the url with the desired uniqueUser
