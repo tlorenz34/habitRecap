@@ -4,6 +4,9 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 exports.exportData = functions.https.onRequest(async (req, res) => {
+  // Allow CORS
+  res.set('Access-Control-Allow-Origin', '*');
+
   // Grab the uniqueUser parameter
   const uniqueUser = req.query.uniqueUser;
 
