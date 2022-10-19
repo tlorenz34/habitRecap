@@ -1,5 +1,12 @@
 # Habit Recap
 
+# Usage
+
+To run local dev
+```
+firebase emulators:start
+```
+
 ## Demo
 
 First, login at `http://127.0.0.1:5002/user/login.html`

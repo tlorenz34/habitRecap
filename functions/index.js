@@ -33,7 +33,11 @@ exports.exportData = functions.https.onRequest(async (req, res) => {
 
   // Convert the items into CSV data
   const replacer = (key, value) => value === null ? '' : value // specify how you want to handle null values here
-  const header = Object.keys(items[0])
+  const header = Object.keys(items[0]).sort((a, b) => {
+    if (a < b) return 1;
+    if (a > b) return -1;
+    return 0;
+  });
   const csv = [
     header.join(','), // header row first
     ...items.map(row => header.map(fieldName => JSON.stringify(row[fieldName], replacer)).join(','))
