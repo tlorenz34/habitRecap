@@ -17,7 +17,10 @@ exports.exportData = functions.https.onRequest(async (req, res) => {
   items = [];
   readResult.forEach(doc => {
     console.log(doc.id, '=>', doc.data());
-    items.push(doc.data());
+    // Replace time with UTC timestamp
+    let o = doc.data();
+    o.time = new Date(o.time.seconds * 1000) // convert Firebase Timestamp to JaveScript Date
+    items.push(o);
   });
 
   // Make sure data exists 
