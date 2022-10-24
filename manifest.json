@@ -1,0 +1,12 @@
+{
+    "name": "My extension",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "content_scripts": [{
+        "matches": ["https://cdnjs.cloudflare.com/*"],
+    "js": ["https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"]
+    }],
+    "permissions": [
+    "tabs", "https://cdnjs.cloudflare.com"
+    ]
+}
